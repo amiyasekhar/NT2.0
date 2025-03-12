@@ -39,7 +39,7 @@ export default function LoginScreen() {
     (async function fetchCodes() {
       try {
         // Replace with your local machine’s IP address if testing on real device
-        const response = await fetch('http://192.168.1.78:3000/auth/getCountryCodes');
+        const response = await fetch('http://172.20.12.66:3000/auth/getCountryCodes');
         const json = await response.json();
         if (json.status && Array.isArray(json.data)) {
           setAllCountries(json.data);
